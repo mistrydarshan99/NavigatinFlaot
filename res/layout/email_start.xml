@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/saveDeleteBar"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_below="@+id/header"
+            android:background="@color/navy_blue" >
+
+        <ImageButton
+                android:id="@+id/imgbtnQMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imgbtnSearch"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                 />
+        <ImageButton
+                android:id="@+id/imgbtnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                 />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/relSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/saveDeleteBar"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_background"
+            android:visibility="visible" >
+        <EditText
+                android:id="@+id/etEmailSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@color/transparent"
+                android:hint="Search email"
+                android:imeOptions="actionDone"
+                android:inputType="text|textNoSuggestions"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/darkslate"
+                android:textColorHint="@color/darkslate"
+                android:textSize="16dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lstEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/TransperentColor"
+        android:divider="@color/darkgray"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="@color/TransperentColor"
+        android:scrollbars="none"/>
+
+</LinearLayout>
+
